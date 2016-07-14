@@ -1,0 +1,26 @@
+Hotel
+    Algemeen:
+    - Exceptions
+    - assertions: Testing
+    - Javadoc
+    - Networked?
+
+
+OCP dingen
+    Advanced class design
+    Generics & Collections:
+    Stream API
+    Lambda's:
+    Date & Time: Boekingen
+    Concurrency: Verdelen van boekingen over kamers
+    Console: TUI
+    File input:
+    File output: generate txt file as a receipt
+    JDBC: Database
+
+
+
+Kamer
+    - Grootte (aantal personen)
+    - Prijs (kan mss wat spannends mee gedaan worden) (mss ENUM prijsklasse)
+    - Andere eigenschappen (dubbel bed/ enkele bedden, balkon, voor invaliden)
