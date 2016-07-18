@@ -1,0 +1,34 @@
+package nl.kyram.ocp.hotel.Booking;
+
+public class BookingParty {
+
+    private int numberOfPersons;
+    private String reserverName;
+
+    public BookingParty(int numberOfPersons, String reserverName) {
+        setNumberOfPersons(numberOfPersons);
+        setReserverName(reserverName);
+    }
+
+    public String getReserverName() {
+        return reserverName;
+    }
+
+    public void setReserverName(String reserverName) {
+        if (reserverName.length <= 0) {
+            throw new IlligalArgumentException("Length of name must be greater than 0!");
+        }
+        this.reserverName = reserverName;
+    }
+
+    public int getNumberOfPersons() {
+        return numberOfPersons;
+    }
+
+    public void setNumberOfPersons(int numberOfPersons) {
+        if (numberOfPersons <= 0) {
+            throw new IlligalArgumentException("Max person must be at least 1");
+        }
+        this.numberOfPersons = numberOfPersons;
+    }
+}

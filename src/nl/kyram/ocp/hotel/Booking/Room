@@ -1,0 +1,44 @@
+package nl.kyram.ocp.hotel.Booking;
+
+public class Room {
+
+    private int maxPersons;
+    private double cost;
+    private boolean occupied;
+
+    public Room(int maxPersons, double cost, boolean occupied) {
+        setMaxPersons(maxPersons);
+        setCost(cost);
+        setOccupied(occupied);
+    }
+
+    public int getMaxPersons() {
+        return maxPersons;
+    }
+
+    public void setMaxPersons(int maxPersons) {
+        if (maxPersons <= 0) {
+            throw new IlligalArgumentException("Max persons cannot be smaller than 1");
+        }
+        this.maxPersons = maxPersons;
+    }
+
+    public double getCost() {
+        return cost;
+    }
+
+    public void setCost(double cost) {
+        if (cost <= 0) {
+            throw new IlligalArgumentException("Cost cannot be smaller than 1");
+        }
+        this.cost = cost;
+    }
+
+    public boolean isOccupied() {
+        return occupied;
+    }
+
+    public void setOccupied(boolean occupied) {
+        this.occupied = occupied;
+    }
+}

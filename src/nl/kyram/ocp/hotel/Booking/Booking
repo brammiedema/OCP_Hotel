@@ -1,0 +1,44 @@
+package nl.kyram.ocp.hotel.Booking;
+
+/**
+ * Mooie class
+ */
+public class Booking {
+
+    private BookingParty bookingParty;
+    private List<Room> Rooms;
+
+    public Booking(BookingParty bookingParty, List<Room> rooms) {
+        this.setBookingParty(bookingParty);
+        this.setRooms(rooms);
+    }
+
+    public static void main(String[] args) {
+        System.out.println("hallo" );
+    }
+
+    public BookingParty getBookingParty() {
+        return bookingParty;
+    }
+
+    public void setBookingParty(BookingParty bookingParty) {
+        if (bookingParty == null) {
+            throw new IlligalArgumentException("Booking party cannot be empty");
+        }
+        this.bookingParty = bookingParty;
+    }
+
+    public List getRooms() {
+        return Rooms;
+
+    }
+
+    public void setRooms(List<Room> rooms) {
+        if (rooms.size() <= 0) {
+            throw new IlligalArgumentException("Number of rooms must be larger than 0");
+        }
+        Rooms = rooms;
+    }
+
+
+}
